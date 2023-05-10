@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url(../assets/fonts/Poppins-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins Bold Italic';
+    src: url(../assets/fonts/Poppins-BoldItalic.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins Extra Bold';
+    src: url(../assets/fonts/Poppins-ExtraBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins Extra Bold Italic';
+    src: url(../assets/fonts/Poppins-ExtraBoldItalic.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins Italic';
+    src: url(../assets/fonts/Poppins-Italic.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url(../assets/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+/* Colors */
+$Purple: hsl(259, 100%, 65%);
+$Lightred: hsl(0, 100%, 67%);
+$White: hsl(0, 0%, 100%);
+$Offwhite: hsl(0, 0%, 94%);
+$Lightgrey: hsl(0, 0%, 86%);
+$Smokeygrey: hsl(0, 1%, 44%);
+$Offblack: hsl(0, 0%, 8%);
+
+/* Normalize */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    font-weight: 400;
+}
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+input{
+    font-size: 2rem;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
+
+/* Styles */
+body{
+    background-color: $Lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "Poppins Regular";
+}
+.main-container{
+    background-color: $White;
+    width: 600px;
+    max-width: 90%;
+    height: 470px;
+    border-radius: 25px 25px 150px 25px;
+    padding: 30px 35px 30px 35px;
+}
+.form-container{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $Lightgrey;
+    position: relative;
+    height: 30%;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+    font-family: 'Poppins Bold';
+    color: $Smokeygrey;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    gap: 5px;
+    @media screen and (max-width: 550px) {
+        font-size:.7rem;
+    }
+}
+.label-error{
+    color: $Lightred;
+}
+input{
+    width: 125px;
+    height: 60px;
+    margin-right: 25px;
+    font-size: 2rem;
+    font-family: 'Poppins Bold';
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid $Lightgrey;
+    &:focus{
+        border: 1px solid $Purple;
+        outline: none;
+    }
+    @media screen and (max-width: 550px) {
+        width: 90%;
+        font-size: 1.3rem;
+    }
+    @media screen and (max-width: 350px) {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+.input-error{
+    border: 1px solid $Lightred;
+    outline: none;
+    &:focus{
+        border: 1px solid $Purple;
+        outline: none;
+    }
+}
+.error-message{
+    color: $Lightred;
+    font-size: .7rem;
+    margin-top: 5px;
+    font-family: 'Poppins Italic';
+    @media screen and (max-width: 550px) {
+        font-size: .5rem;
+    }
+}
+button{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 90%;
+    bottom: -30%;
+    background-image: url(../assets/images/icon-arrow.svg);
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: $Purple;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    &:hover{
+        background-color: $Offblack;
+    }
+    @media screen and (max-width: 400px) {
+        left: 80%;
+    }
+}
+.results-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height:70%;
+}
+.result{
+    font-family: 'Poppins Extra Bold Italic';
+    font-size: 4rem;
+    color: $Offblack;
+    @media screen and (max-width: 550px) {
+        font-size: 3rem;
+    }
+    @media screen and (max-width: 374px) {
+        font-size: 2.5rem;
+    }
+}
+.qty{
+    color: $Purple;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute;
+    bottom: 10px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); }
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+  <main class="main-container">
+    <form class="form-container">
+      <div class="input-container">
+        <label for="day" class="day-label">Day<input type="number" id="day" name="day" placeholder="DD"></label>
+        <p class="error-message"></p>
+      </div>
+      <div class="input-container">
+        <label for="month" class="month-label">Month<input type="number" id="month" name="month" placeholder="MM"></label>
+        <p class="error-message"></p>
+      </div>
+      <div class="input-container">
+        <label for="year" class="year-label">Year<input type="number" id="year" name="year" placeholder="YYYY"></label>
+        <p class="error-message"></p>
+      </div>
+      <button type="submit"></button>
+    </form>
+    <section class="results-container">
+      <p class="result"><span class="qty qty-years">--</span> years</p>
+      <p class="result"><span class="qty qty-months">--</span> months</p>
+      <p class="result"><span class="qty qty-days">--</span> days</p>
+    </section>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/juanmderosa" target="_blank">Juan Martín De Rosa</a>.
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
