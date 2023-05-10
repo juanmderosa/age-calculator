@@ -66,7 +66,7 @@ function validateMonthsInput(input, label){
 }
 
 function validateYearsInput(input, label){
-    if(input.value > currentYear){
+    if(input.value > currentYear || input.value.length < 3){
         label.classList.add("label-error");
         input.classList.add("input-error");
         errorMessage[2].innerText = "Must be in the past";
